@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-plugin-layout",
       options: {
@@ -22,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
   ],
