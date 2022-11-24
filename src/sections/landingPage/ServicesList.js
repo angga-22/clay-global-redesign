@@ -115,11 +115,11 @@ const ServicesList = () => {
                 {
                   item.isOpened &&
                   <StaticImage
-                    width={20} src={'../../assets/icons/down-arrow.png'}></StaticImage>
+                    width={20} src={'../../assets/icons/down-arrow.png'} alt="arrow"></StaticImage>
                 }
                 {
                   !item.isOpened &&
-                  <StaticImage width={15} src={'../../assets/icons/up-chevron.png'}></StaticImage>
+                  <StaticImage width={15} src={'../../assets/icons/up-chevron.png'} alt="arrow"></StaticImage>
                 }
               </Box>
               {

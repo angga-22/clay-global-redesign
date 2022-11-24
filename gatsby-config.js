@@ -15,6 +15,12 @@ module.exports = {
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-mdx`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
+    {
       resolve: "gatsby-plugin-layout",
       options: {
         component: require.resolve("./src/layouts/index.js"),

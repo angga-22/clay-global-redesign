@@ -9,7 +9,6 @@ export default {
   rawColors: {
     primary: '#07c',
     modes: {
-      // __default: {}, no '__default' here as initialColorModeName is defined
       light: { primary: '#07c' },
       dark: { primary: '#242827' }
     }
@@ -53,6 +52,12 @@ export default {
       lineHeight: "125%",
       fontFamily: "label",
       fontWeight: "normal",
+      fontSize: ["40px", "50px", "38px", "51px", "56px", "55px"],
+    },
+    highlight: {
+      color: "text",
+      lineHeight: "125%",
+      fontWeight: "900",
       fontSize: ["40px", "50px", "38px", "51px", "56px", "55px"],
     },
     h3: {
