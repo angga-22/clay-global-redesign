@@ -43,9 +43,14 @@ const Nav = () => {
       // as="nav"
       sx={{
         alignItems: "center",
-        height: ["110px", "120px", "100px", "120px", "120px", "120px"],
+        mt: hamburgerClicked ? '-190px' : '0',
+        height:
+          hamburgerClicked ? '500px' :
+            ["110px", "120px", "100px", "120px", "120px", "120px"],
         position: "relative",
         overflow: "hidden",
+        transition: "all 1s",
+
       }}
     >
       <GridItem
@@ -56,7 +61,9 @@ const Nav = () => {
       </GridItem>
       <GridItem
         sx={{
-          gridColumn: ["5 / span 19"],
+          gridColumn:
+            hamburgerClicked ? '5 / 13' :
+              ["5 / span 19"],
           display: "flex",
           flexDirection: ["column", "column", "column", "column", "row", "row"],
           position: [
@@ -68,15 +75,14 @@ const Nav = () => {
             "static",
           ],
           justifyContent: "space-between ",
-          // width: ["100%", "100%", "100%", "80%", "65%", "60%"],
           zIndex: "1",
           "@media screen and (max-width: 700px)": {
           },
           alignItems: "center",
-          top: "100px",
+          top: hamburgerClicked ? '300px' : "100px",
           transition: "all 1s",
           transform: hamburgerClicked
-            ? "translateX(0)"
+            ? "translateX(-10%)"
             : [
               "translateX(-220%)",
               "translateX(-220%)",
@@ -97,6 +103,7 @@ const Nav = () => {
             style={{
               color: "#000",
               textDecoration: "none",
+              paddingBottom: hamburgerClicked ? '20px' : '0'
             }}
           >
             <Text
@@ -108,7 +115,7 @@ const Nav = () => {
                 ':hover': {
                   textDecoration: 'underline',
                   fontWeight: 'bold',
-                }
+                },
               }}
             >
               {menu.label}{" "}
@@ -117,7 +124,8 @@ const Nav = () => {
         ))}
         <Button
           sx={{
-            mt: '25px'
+            mt: hamburgerClicked ? '0' : '25px',
+            pl: '60px'
           }}
           buttonTheme="darkMode"
           onClick={(e) => {
@@ -137,6 +145,7 @@ const Nav = () => {
             '24'
           ],
           cursor: "pointer",
+          position: hamburgerClicked ? 'absolute' : 'static',
           [Breakpoints.tabletLandscape]: {
             display: "none",
           },

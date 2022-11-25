@@ -7,7 +7,7 @@ module.exports = {
     description: `Website for people`,
     author: `Angga Saputra`,
     image: `src/assets/icons/favicon-logo.png`,
-    keyword: `clay-global, clay, web, web services, angga-clay-redesign`,
+    keywords: `clay-global, clay, web, web services, angga-clay-redesign`,
     siteUrl: `https://clayglobalredesignangga.gatsbyjs.io/`,
   },
   plugins: [

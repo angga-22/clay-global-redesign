@@ -9,7 +9,7 @@ export const useSiteMetadata = () => {
           author
           description
           image
-          keyword
+          keywords
           siteUrl
         }
       }
