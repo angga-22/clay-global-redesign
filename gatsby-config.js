@@ -4,9 +4,11 @@
 module.exports = {
   siteMetadata: {
     title: `clay-global`,
-    description: 'Website for people',
-    author: 'Angga Saputra',
-    siteUrl: `https://www.yourdomain.tld`,
+    description: `Website for people`,
+    author: `Angga Saputra`,
+    image: `src/assets/icons/favicon-logo.png`,
+    keyword: `clay-global, clay, web, web services`,
+    siteUrl: `https://clayglobalredesignangga.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,

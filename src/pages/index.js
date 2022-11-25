@@ -3,7 +3,7 @@ import Clients from '../sections/landingPage/Clients'
 import Highlight from '../sections/landingPage/Highlight'
 import ServicesList from '../sections/landingPage/ServicesList'
 import TopContent from '../sections/landingPage/TopContent'
-
+import { SEO } from "../components/seo"
 const LandingPage = () => {
   return (
     <main >
@@ -17,4 +17,6 @@ const LandingPage = () => {
 
 export default LandingPage
 
-export const Head = () => <title>Clay: UI/UX Design</title>
+export const Head = () => (
+  <SEO />
+)
