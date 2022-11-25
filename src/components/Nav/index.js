@@ -6,7 +6,7 @@ import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 import { useColorMode } from 'theme-ui'
 import Button from '../Button'
 import { useThemeUI } from 'theme-ui'
-
+import Logo from '../Logo';
 const Nav = () => {
   const [hamburgerClicked, setHamburgerClicked] = React.useState(false);
   const { theme: { rawColors } } = useThemeUI()
@@ -50,11 +50,9 @@ const Nav = () => {
     >
       <GridItem
         sx={{
-          gridColumn: ["1 / 2"]
+          gridColumn: ["1 / 4"]
         }}>
-        <svg src="http://www.w3.org/2000/svg" style={{ fill: 'rgb(90, 250, 231)' }} viewBox="0 0 52 80">
-          <path d="M31,0C14.4,0,1,13.4,1,30s13.4,30,30,30V0z"></path>
-        </svg>
+        <Logo mode={colorMode} />
       </GridItem>
       <GridItem
         sx={{
@@ -102,13 +100,15 @@ const Nav = () => {
             }}
           >
             <Text
-
               sx={{
                 color: rawColors.modes.light.text,
                 fontFamily: "body",
-                fontWeight: "normal",
                 lineHeight: "100%",
                 fontSize: ["16px", "16px", "16px", "16px", "16px", "18px"],
+                ':hover': {
+                  textDecoration: 'underline',
+                  fontWeight: 'bold',
+                }
               }}
             >
               {menu.label}{" "}
@@ -123,8 +123,7 @@ const Nav = () => {
           onClick={(e) => {
             setColorMode(colorMode === 'default' ? 'dark' : 'default')
           }}>
-          Mode {colorMode === 'default' ? 'Dark' : 'Light'}
-
+          {colorMode === 'default' ? 'Night View' : 'Day View'}
         </Button>
 
       </GridItem>

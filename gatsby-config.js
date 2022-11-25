@@ -3,11 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `clay-global`,
+    title: `Clay: UI/UX Design and Web Services`,
     description: `Website for people`,
     author: `Angga Saputra`,
     image: `src/assets/icons/favicon-logo.png`,
-    keyword: `clay-global, clay, web, web services`,
+    keyword: `clay-global, clay, web, web services, angga-clay-redesign`,
     siteUrl: `https://clayglobalredesignangga.gatsbyjs.io/`,
   },
   plugins: [

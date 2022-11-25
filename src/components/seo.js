@@ -1,6 +1,6 @@
 import React from "react"
 import { useSiteMetadata } from '../hooks/site-metadata'
-
+import icon from '../assets/icons/favicon-logo.png'
 export const SEO = ({ title, description, pathname, children }) => {
   const { title: defaultTitle, description: defaultDescription, image, siteUrl, keyword } = useSiteMetadata()
 
@@ -17,7 +17,7 @@ export const SEO = ({ title, description, pathname, children }) => {
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>" />
+      <link rel="icon" href={icon} />
       {children}
     </>
   )

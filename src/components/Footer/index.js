@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Text, Box } from "theme-ui";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
-
+import Logo from '../Logo';
 const Footer = () => {
   return (
     <GridWrapper
@@ -30,9 +30,11 @@ const Footer = () => {
             color: '#fff'
           }}>Let's Talk.
           </Text>
-          <svg width="60" src="http://www.w3.org/2000/svg" style={{ fill: 'rgb(90, 250, 231)' }} viewBox="0 0 52 80">
-            <path d="M40,6V62A28,28,0,0,1,40,6Z"></path>
-          </svg>
+          <Box sx={{
+            width: '200px'
+          }}>
+            <Logo />
+          </Box>
         </Box>
 
       </GridItem>
