@@ -1,6 +1,7 @@
 import React from 'react'
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 import { Text, Box } from 'theme-ui';
+import myVideo from '../../assets/reel-min.mp4'
 const TopContent = () => {
 
   return (
@@ -52,7 +53,19 @@ const TopContent = () => {
               height: '650px'
             }
           }}>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LcSevy6HUQc" title="Clay Reel 2018" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {/* <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LcSevy6HUQc" title="Clay Reel 2018" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
+
+            <video
+              width="100%" height="100%"
+              controls autoPlay>
+              <source src={myVideo} type="video/mp4" />
+            </video>
+
+            <audio controls autoplay>
+              <source src={myVideo} type="audio/ogg" />
+              <source src={myVideo} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
           </Box>
         </GridItem>
 
